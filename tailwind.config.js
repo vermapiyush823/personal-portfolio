@@ -8,8 +8,18 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        background: "#000",
+        secondaryBackground: "#0A0A0A",
+        text: "#EDEDED",
+        gray: "#1A1A1A",
+      },
+      fontFamily: {
+        GeistBlack: ["GeistBlack", "sans-serif"],
+        GeistLight: ["GeistLight", "sans-serif"],
+        GeistRegular: ["GeistRegular", "sans-serif"],
+        GeistMedium: ["GeistMedium", "sans-serif"],
+        GeistBold: ["GeistBold", "sans-serif"],
+        GeistXBold: ["GeistExtraBold", "sans-serif"],
       },
     },
   },
