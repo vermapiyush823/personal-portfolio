@@ -1,3 +1,4 @@
+// tailwind.config.js
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -8,18 +9,17 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        background: "#000",
-        secondaryBackground: "#0A0A0A",
-        text: "#EDEDED",
-        gray: "#1A1A1A",
-      },
-      fontFamily: {
-        GeistBlack: ["GeistBlack", "sans-serif"],
-        GeistLight: ["GeistLight", "sans-serif"],
-        GeistRegular: ["GeistRegular", "sans-serif"],
-        GeistMedium: ["GeistMedium", "sans-serif"],
-        GeistBold: ["GeistBold", "sans-serif"],
-        GeistXBold: ["GeistExtraBold", "sans-serif"],
+        light: {
+          primary: "#FFFFFF",
+          text: "#FFFFFF",
+        },
+        dark: {
+          primary: "#000000",
+          text: "#000000",
+        },
+        whiteGray: "#D1D5DB",
+        gray: "#454545",
+        textGray: "#878787",
       },
     },
   },

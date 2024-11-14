@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -17,59 +19,5 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
-@font-face {
-  font-family: "GeistBlack";
-  src: url("/assets/fonts/Geist-Black.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "GeistBold";
-  src: url("/assets/fonts/Geist-Bold.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "GeistRegular";
-  src: url("/assets/fonts/Geist-Regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "GeistLight";
-  src: url("/assets/fonts/Geist-Light.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "GeistThin";
-  src: url("/assets/fonts/Geist-Thin.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "GeistExtraLight";
-  src: url("/assets/fonts/Geist-ExtraLight.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "GeistMedium";
-  src: url("/assets/fonts/Geist-Medium.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "GeistSemiBold";
-  src: url("/assets/fonts/Geist-SemiBold.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "GeistExtraBold";
-  src: url("/assets/fonts/Geist-ExtraBold.ttf") format("truetype");
-  font-weight: bolder;
-  font-style: normal;
+  font-family: 'Poppins', sans-serif;
 }
