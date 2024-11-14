@@ -11,7 +11,7 @@ const Company = ({ company, role, date, description, logo }) => {
         }`}
       ></div>
       <div className="ml-12">
-        <h3 className="text-lg font-bold">{role}</h3>
+        <h3 className=" text-lg font-extrabold">{role}</h3>
         <p
           className={`
             ${theme === "dark" ? "text-whiteGray" : "text-gray"}
@@ -34,7 +34,7 @@ const Company = ({ company, role, date, description, logo }) => {
           • {date}
         </p>
         <ul
-          className={`list-disc list-inside mt-2 space-y-1
+          className={`list-disc text-sm list-inside mt-2 space-y-1
         ${theme === "dark" ? "text-whiteGray" : "text-gray"}`}
         >
           {description.map((desc, index) => (
