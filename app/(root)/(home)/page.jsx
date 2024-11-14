@@ -19,7 +19,7 @@ const Home = () => {
             />
             <div className="flex flex-col items-center sm:items-start">
               <h1 className="text-xl font-bold">Piyush Verma</h1>
-              <p className="text-sm font-light flex items-center gap-1">
+              <p className="text-sm font-light flex text-center gap-1">
                 A Full Stack Developer, who loves to code
               </p>
             </div>
