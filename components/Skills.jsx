@@ -21,9 +21,10 @@ const Skills = () => {
           skills={[
             { name: "React", logo: reactLogo },
             { name: "HTML", logo: htmlLogo },
-            { name: "CSS", logo: cssLogo },
             { name: "Node.js", logo: nodeLogo },
             { name: "Next.js", logo: nextLogo },
+            { name: "CSS", logo: cssLogo },
+
             { name: "Laravel", logo: laravelLogo },
           ]}
         />
