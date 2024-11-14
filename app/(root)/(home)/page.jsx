@@ -7,7 +7,7 @@ const Home = () => {
 
   return (
     <div className="w-full px-4 py-8 flex items-center justify-center min-h-[50vh]">
-      <div className="w-full max-w-4xl p-6 flex flex-col sm:flex-row  justify-between gap-6 rounded-xl border border-gray dark:border-gray-700 transition-all">
+      <div className="w-full max-w-3xl p-6 flex flex-col sm:flex-row  justify-between gap-6 rounded-xl border border-gray dark:border-gray-700 transition-all">
         {/* Left content section */}
         <div className="w-full sm:w-3/3 flex flex-col items-center sm:items-start space-y-6">
           {/* Profile header with small image */}
@@ -26,7 +26,7 @@ const Home = () => {
           </div>
 
           {/* Email section */}
-          <div className="w-full sm:flex  items-center text-center sm:text-left">
+          <div className="w-full   sm:flex   items-center text-center sm:text-left">
             <p
               className={`text-sm w-full inline 
             ${theme === "dark" ? "text-whiteGray" : "text-gray"}
