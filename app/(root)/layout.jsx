@@ -6,7 +6,7 @@ export default function Layout({ children }) {
   const { theme } = useTheme();
   return (
     <main
-      className={`min-w-[100vw] min-h-[100vh] flex flex-col p-4          
+      className={`w-full min-h-[100vh] flex flex-col p-4          
        ${
          theme === "dark"
            ? "bg-dark-primary text-light-primary"
@@ -14,7 +14,13 @@ export default function Layout({ children }) {
        }`}
     >
       <ThemeSwitcher />
-      <section className="flex justify-center w-full">{children}</section>
+      <section
+        className="flex justify-center w-full
+        min-h-[100vh] 
+      "
+      >
+        {children}
+      </section>
     </main>
   );
 }
