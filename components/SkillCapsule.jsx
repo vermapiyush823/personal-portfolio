@@ -10,7 +10,7 @@ const SkillCapsule = ({ skillCategory, skills }) => {
         {skills.map((skill, index) => (
           <div
             key={index}
-            className={`px-2 py-1 sm:px-3  font-bold gap-x-1 
+            className={`px-2 py-1 sm:px-3  sm:font-bold gap-x-1 flex items-center 
         ${
           theme === "dark"
             ? "bg-gray text-whiteGray"
