@@ -35,7 +35,7 @@ const Home = () => {
               Looking to hire me? Email me at{" "}
               <a
                 href="mailto:vermapiyush823@gmail.com"
-                className={`mt-2 text-sm  sm:mt-0  px-4 py-2 rounded-full transition-colors ${
+                className={`mt-2 text-sm  sm:mt-0  px-3 py-1 rounded-full transition-colors ${
                   theme === "dark"
                     ? "bg-white/20 text-light-primary hover:bg-white/30"
                     : "bg-whiteGray text-dark-primary hover:bg-gray-200"
