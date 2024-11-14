@@ -18,7 +18,7 @@ const Home = () => {
               className="w-12 h-12 rounded-full sm:inline-block"
             />
             <div className="flex flex-col items-center sm:items-start">
-              <h1 className="text-xl font-bold">Piyush Verma</h1>
+              <h1 className="text-xl  font-extrabold">Piyush Verma</h1>
               <p className="text-sm font-light flex text-center gap-1">
                 A Full Stack Developer, who loves to code
               </p>
@@ -28,14 +28,14 @@ const Home = () => {
           {/* Email section */}
           <div className="w-full   sm:flex   items-center text-center sm:text-left">
             <p
-              className={`text-sm w-full inline 
+              className={`text-base w-full inline 
             ${theme === "dark" ? "text-whiteGray" : "text-gray"}
             `}
             >
               Looking to hire me? Email me at{" "}
               <a
                 href="mailto:vermapiyush823@gmail.com"
-                className={`mt-2 text-sm  sm:mt-0  px-3 py-1 rounded-full transition-colors ${
+                className={`mt-2 text-base  sm:mt-0  px-3 py-2 rounded-full transition-colors ${
                   theme === "dark"
                     ? "bg-white/20 text-light-primary hover:bg-white/30"
                     : "bg-whiteGray text-dark-primary hover:bg-gray-200"
