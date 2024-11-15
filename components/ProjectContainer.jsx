@@ -2,7 +2,7 @@ import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import Image from "next/image";
 import Link from "next/link";
 import { useTheme } from "../app/context/themeContext";
-import Unstuck from "../assets/images/unstuck.png";
+import Unstuck from "../assets/images/unStuck.png";
 import NextJs from "../assets/logos/nextjs.svg";
 import Tailwindcss from "../assets/logos/tailwind.svg";
 import SmallSkillCapsule from "./SmallSkillCapsule";
