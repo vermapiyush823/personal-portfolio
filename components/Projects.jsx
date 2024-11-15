@@ -1,102 +1,103 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useTheme } from "../app/context/themeContext";
 import UnStuck from "../assets/images/unStuck.png";
 import NextJs from "../assets/logos/nextjs.svg";
 import TailwindCss from "../assets/logos/tailwind.svg";
 import ProjectContainer from "./ProjectContainer";
+
 const Projects = () => {
   const { theme } = useTheme();
-  const [showProjects, setShowProjects] = useState(true);
+  const [showAllProjects, setShowAllProjects] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Detect screen size changes
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 640); // Mobile size if width < 640px (sm breakpoint)
+    };
+
+    // Initialize on mount
+    handleResize();
+
+    // Add resize listener
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const projects = [
+    {
+      projectname: "UnStuck",
+      projectimage: UnStuck,
+      projecttechstack: [
+        { name: "Next.js", logo: NextJs },
+        { name: "Tailwind CSS", logo: TailwindCss },
+      ],
+      projectgithublink: "https://github.com/vermapiyush823/unStuck",
+      projectlink: "https://un-stuck.vercel.app/",
+    },
+    {
+      projectname: "UnStuck",
+      projectimage: UnStuck,
+      projecttechstack: [
+        { name: "Next.js", logo: NextJs },
+        { name: "Tailwind CSS", logo: TailwindCss },
+      ],
+      projectgithublink: "https://github.com/vermapiyush823/unStuck",
+      projectlink: "https://un-stuck.vercel.app/",
+    },
+    {
+      projectname: "UnStuck",
+      projectimage: UnStuck,
+      projecttechstack: [
+        { name: "Next.js", logo: NextJs },
+        { name: "Tailwind CSS", logo: TailwindCss },
+      ],
+      projectgithublink: "https://github.com/vermapiyush823/unStuck",
+      projectlink: "https://un-stuck.vercel.app/",
+    },
+    {
+      projectname: "UnStuck",
+      projectimage: UnStuck,
+      projecttechstack: [
+        { name: "Next.js", logo: NextJs },
+        { name: "Tailwind CSS", logo: TailwindCss },
+      ],
+      projectgithublink: "https://github.com/vermapiyush823/unStuck",
+      projectlink: "https://un-stuck.vercel.app/",
+    },
+    // Repeat or add more projects here
+  ];
+
+  const visibleProjects =
+    isMobile && !showAllProjects ? projects.slice(0, 2) : projects;
+
   return (
     <div className="w-full max-w-3xl mt-16 rounded-xl transition-all">
       <h2 className="text-2xl font-bold mb-1 ml-1">Projects</h2>
       <hr className="w-full border-t-2 mb-4 border-gray" />
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        <ProjectContainer
-          projectname="UnStuck"
-          projectimage={UnStuck}
-          projecttechstack={[
-            {
-              name: "Next.js",
-              logo: NextJs,
-            },
-            {
-              name: "Tailwind CSS",
-              logo: TailwindCss,
-            },
-          ]}
-          projectgithublink="https://github.com/vermapiyush823/unStuck"
-          projectlink="https://un-stuck.vercel.app/"
-        />
-        <ProjectContainer
-          projectname="UnStuck"
-          projectimage={UnStuck}
-          projecttechstack={[
-            {
-              name: "Next.js",
-              logo: NextJs,
-            },
-            {
-              name: "Tailwind CSS",
-              logo: TailwindCss,
-            },
-          ]}
-          projectgithublink="https://github.com/vermapiyush823/unStuck"
-          projectlink="https://un-stuck.vercel.app/"
-        />
-        {!showProjects && (
-          <button
-            className={`text-sm text-white p-1 px-2  bg-white/40 rounded-full hover:underline
-          block sm:hidden
-        `}
-            onClick={() => setShowProjects(true)}
-          >
-            Show More
-          </button>
-        )}
-        {showProjects && (
-          <>
-            <ProjectContainer
-              projectname="UnStuck"
-              projectimage={UnStuck}
-              projecttechstack={[
-                {
-                  name: "Next.js",
-                  logo: NextJs,
-                },
-                {
-                  name: "Tailwind CSS",
-                  logo: TailwindCss,
-                },
-              ]}
-              projectgithublink="https://github.com/vermapiyush823/unStuck"
-              projectlink="https://un-stuck.vercel.app/"
-            />
-            <ProjectContainer
-              projectname="UnStuck"
-              projectimage={UnStuck}
-              projecttechstack={[
-                {
-                  name: "Next.js",
-                  logo: NextJs,
-                },
-                {
-                  name: "Tailwind CSS",
-                  logo: TailwindCss,
-                },
-              ]}
-              projectgithublink="https://github.com/vermapiyush823/unStuck"
-              projectlink="https://un-stuck.vercel.app/"
-            />
-            <button
-              className="text-sm text-white p-1 px-2  bg-white/40 rounded-full hover:underline block sm:hidden"
-              onClick={() => setShowProjects(false)}
-            >
-              Show Less
-            </button>
-          </>
-        )}
+        {visibleProjects.map((project, index) => (
+          <ProjectContainer
+            key={index}
+            projectname={project.projectname}
+            projectimage={project.projectimage}
+            projecttechstack={project.projecttechstack}
+            projectgithublink={project.projectgithublink}
+            projectlink={project.projectlink}
+          />
+        ))}
       </div>
+      {isMobile && (
+        <div className="flex justify-center w-full mt-4">
+          <button
+            className="text-sm text-white p-1 px-2 w-full bg-white/50 rounded-full hover:underline"
+            onClick={() => setShowAllProjects(!showAllProjects)}
+          >
+            {showAllProjects ? "Show Less" : "Show More"}
+          </button>
+        </div>
+      )}
     </div>
   );
 };
