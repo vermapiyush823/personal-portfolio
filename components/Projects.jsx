@@ -94,7 +94,13 @@ const Projects = () => {
       {isMobile && (
         <div className="flex justify-center w-full mt-4">
           <button
-            className="text-sm text-white p-1 px-2 w-full bg-white/50 rounded-full hover:bg-white/60"
+            className={`text-sm  p-1 px-2 w-full rounded-full 
+            ${
+              theme === "dark"
+                ? "bg-light-primary/50 hover:bg-light-primary/70 text-light-primary"
+                : "bg-gray/40 hover:bg-dark-primary/50 text-dark-primary"
+            }
+            `}
             onClick={() => setShowAllProjects(!showAllProjects)}
           >
             {showAllProjects ? "Show Less" : "Show More"}
