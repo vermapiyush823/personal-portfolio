@@ -1,5 +1,6 @@
 import { useTheme } from "../app/context/themeContext";
 import cssLogo from "../assets/logos/css-3.svg";
+import ExpressLogo from "../assets/logos/express.svg";
 import figmaLogo from "../assets/logos/figma.svg";
 import GitLogo from "../assets/logos/git.svg";
 import GithubLogo from "../assets/logos/github.svg";
@@ -11,8 +12,11 @@ import MongoDbLogo from "../assets/logos/mongodb.svg";
 import MySqlLogo from "../assets/logos/mysql.svg";
 import nextLogo from "../assets/logos/nextjs.svg";
 import nodeLogo from "../assets/logos/node-js.svg";
+import Php from "../assets/logos/php2.svg";
+import PostmanLogo from "../assets/logos/postman.svg";
 import PythonLogo from "../assets/logos/python.svg";
 import reactLogo from "../assets/logos/react.svg";
+import TailwindLogo from "../assets/logos/tailwind.svg";
 
 import SkillCapsule from "./SkillCapsule";
 
@@ -25,48 +29,34 @@ const Skills = () => {
       <hr className="w-full border-t-2 mb-4 border-gray" />
       <div
         className="grid
-     grid-cols-2 sm:grid-cols-2 md:grid-cols-3
-        gap-1 gap-y-2 sm:gap-2 "
+     grid-cols-1 sm:grid-cols-1 md:grid-cols-3
+        gap-1 gap-y-3 sm:gap-2 "
       >
         <SkillCapsule
-          skillCategory={"Web Development"}
+          skillCategory={"Frontend"}
           skills={[
             { name: "HTML", logo: htmlLogo },
             { name: "CSS", logo: cssLogo },
+            { name: "Tailwind CSS", logo: TailwindLogo },
             { name: "React", logo: reactLogo },
             { name: "Next.js", logo: nextLogo },
-            { name: "Node.js", logo: nodeLogo },
-            { name: "Laravel", logo: laravelLogo },
           ]}
         />
         <SkillCapsule
-          skillCategory={"Languages"}
-          skills={[
-            { name: "JavaScript", logo: JsLogo },
-            { name: "Python", logo: PythonLogo },
-            { name: "Java", logo: JavaLogo },
-          ]}
-        />
-        <SkillCapsule
-          skillCategory={"Tools"}
+          skillCategory={"Backend"}
           skills={[
             {
-              name: "Git",
-              logo: GitLogo,
+              name: "Node.js",
+              logo: nodeLogo,
             },
             {
-              name: "Github",
-              logo: GithubLogo,
+              name: "Express.js",
+              logo: ExpressLogo,
             },
             {
-              name: "Figma",
-              logo: figmaLogo,
+              name: "Laravel",
+              logo: laravelLogo,
             },
-          ]}
-        />
-        <SkillCapsule
-          skillCategory={"Databases"}
-          skills={[
             {
               name: "MongoDB",
               logo: MongoDbLogo,
@@ -77,6 +67,39 @@ const Skills = () => {
             },
           ]}
         />
+        <SkillCapsule
+          skillCategory={"Languages"}
+          skills={[
+            { name: "JavaScript", logo: JsLogo },
+            { name: "Python", logo: PythonLogo },
+            { name: "Java", logo: JavaLogo },
+            { name: "PHP", logo: Php },
+          ]}
+        />
+
+        <div className="sm:col-start-2">
+          <SkillCapsule
+            skillCategory={"Tools"}
+            skills={[
+              {
+                name: "Git",
+                logo: GitLogo,
+              },
+              {
+                name: "Github",
+                logo: GithubLogo,
+              },
+              {
+                name: "Figma",
+                logo: figmaLogo,
+              },
+              {
+                name: "Postman",
+                logo: PostmanLogo,
+              },
+            ]}
+          />
+        </div>
       </div>
     </div>
   );
