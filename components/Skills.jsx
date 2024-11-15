@@ -47,7 +47,6 @@ const Skills = () => {
             { name: "Java", logo: JavaLogo },
           ]}
         />
-        // take full
         <SkillCapsule
           skillCategory={"Tools"}
           skills={[
