@@ -2,12 +2,15 @@ import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import Image from "next/image";
 import Link from "next/link";
 import { useTheme } from "../app/context/themeContext";
-import Unstuck from "../assets/images/unStuck.png";
-import NextJs from "../assets/logos/nextjs.svg";
-import Tailwindcss from "../assets/logos/tailwind.svg";
 import SmallSkillCapsule from "./SmallSkillCapsule";
 
-const ProjectContainer = () => {
+const ProjectContainer = ({
+  projectname,
+  projectimage,
+  projectlink,
+  projectgithublink,
+  projecttechstack,
+}) => {
   const { theme } = useTheme();
   return (
     <div
@@ -26,29 +29,36 @@ const ProjectContainer = () => {
       `}
       >
         <Image
-          src={Unstuck}
-          alt="Unstuck"
+          src={projectimage}
+          alt={projectname}
           width={100}
+          priority
+          unoptimized={true}
           height={100}
           className="rounded-xl
-          
-         w-full h-full object-cover"
+            
+         w-full h-full"
         />
       </Link>
       <div className="flex gap-2 mt-3">
-        <SmallSkillCapsule skillname={"Next.js"} logo={NextJs} />
-        <SmallSkillCapsule skillname={"Tailwind CSS"} logo={Tailwindcss} />
+        {projecttechstack.map((skill, index) => (
+          <SmallSkillCapsule
+            key={index}
+            skillname={skill.name}
+            logo={skill.logo}
+          />
+        ))}
       </div>
       <div className="flex flex-col w-fit gap-2 text-center justify-center mt-3">
         <Link
-          href="https://un-stuck.vercel.app/"
+          href={projectlink}
           className="text-sm text-blue-400 p-1 px-2  bg-blue-400/40 rounded-full hover:underline"
           target="_blank"
         >
           Click here to view the project
         </Link>
         <Link
-          href="https://github.com/vermapiyush823/unStuck"
+          href={projectgithublink}
           target="_blank"
           className="text-sm flex justify-center gap-1 items-center text-white p-1 px-2 rounded-full bg-whiteGray/10 hover:underline"
         >
