@@ -14,7 +14,7 @@ const ProjectContainer = ({
   const { theme } = useTheme();
   return (
     <div
-      className={`flex flex-col items-center border-2 border-gray rounded-xl p-4 h-fit
+      className={`flex flex-col items-center border-2 border-gray rounded-xl p-4 h-full
       `}
     >
       <Link
@@ -40,7 +40,7 @@ const ProjectContainer = ({
          w-full h-full"
         />
       </Link>
-      <div className="flex gap-2 mt-3">
+      <div className="flex gap-2 mt-3 flex-wrap justify-center">
         {projecttechstack.map((skill, index) => (
           <SmallSkillCapsule
             key={index}
@@ -52,7 +52,7 @@ const ProjectContainer = ({
       <div className="flex flex-col w-fit gap-2 text-center justify-center mt-3">
         <Link
           href={projectlink}
-          className="text-sm text-blue-400 p-1 px-2  bg-blue-400/40 rounded-full hover:underline"
+          className="text-sm text-blue-400 p-1 px-2  bg-blue-400/40 rounded-full hover:bg-blue-400/50"
           target="_blank"
         >
           Click here to view the project
@@ -60,9 +60,13 @@ const ProjectContainer = ({
         <Link
           href={projectgithublink}
           target="_blank"
-          className={`text-sm flex justify-center gap-1 items-center  p-1 px-2 rounded-full bg-whiteGray/10 hover:underline
+          className={`text-sm flex justify-center gap-1 items-center  p-1 px-2 rounded-full 
           
-            ${theme === "light" ? "text-gray bg-gray/10" : "text-white bg-gray"}
+            ${
+              theme === "light"
+                ? "text-gray bg-gray/30 hover:bg-gray/20"
+                : "text-white bg-whiteGray/10 hover:bg-whiteGray/20"
+            }
           `}
         >
           Github Link <GitHubLogoIcon />

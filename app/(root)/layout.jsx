@@ -10,7 +10,7 @@ export default function Layout({ children }) {
        ${
          theme === "dark"
            ? "bg-dark-primary text-light-primary"
-           : "bg-light-primary text-dark-primary"
+           : "bg-white text-dark-primary"
        }`}
     >
       <ThemeSwitcher />

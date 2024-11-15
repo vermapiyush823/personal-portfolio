@@ -52,10 +52,12 @@ const Projects = () => {
       projecttechstack: [
         { name: "Next.js", logo: NextJs },
         { name: "Tailwind CSS", logo: TailwindCss },
+        { name: "Tailwind CSS", logo: TailwindCss },
       ],
       projectgithublink: "https://github.com/vermapiyush823/unStuck",
       projectlink: "https://un-stuck.vercel.app/",
     },
+
     {
       projectname: "UnStuck",
       projectimage: UnStuck,
@@ -66,6 +68,7 @@ const Projects = () => {
       projectgithublink: "https://github.com/vermapiyush823/unStuck",
       projectlink: "https://un-stuck.vercel.app/",
     },
+
     // Repeat or add more projects here
   ];
 
