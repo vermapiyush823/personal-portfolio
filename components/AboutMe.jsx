@@ -1,5 +1,6 @@
 import { GitHubLogoIcon, InstagramLogoIcon } from "@radix-ui/react-icons";
 import { Linkedin, LogoTwitterX } from "geist-icons";
+import Image from "next/image";
 import { useTheme } from "../app/context/themeContext";
 const AboutMe = () => {
   const { theme } = useTheme();
@@ -10,8 +11,10 @@ const AboutMe = () => {
         {/* Profile header with small image */}
 
         <div className="flex flex-col sm:flex-row items-center gap-4 w-full">
-          <img
-            src="https://avatars.githubusercontent.com/u/54374601?v=4"
+          <Image
+            width={12}
+            height={12}
+            src={"https://avatars.githubusercontent.com/u/54374601?v=4"}
             alt="Piyush Verma"
             className="w-12 h-12 rounded-full sm:inline-block"
           />
