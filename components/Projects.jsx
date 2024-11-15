@@ -94,7 +94,7 @@ const Projects = () => {
       {isMobile && (
         <div className="flex justify-center w-full mt-4">
           <button
-            className="text-sm text-white p-1 px-2 w-full bg-white/50 rounded-full hover:underline"
+            className="text-sm text-white p-1 px-2 w-full bg-white/50 rounded-full hover:bg-white/60"
             onClick={() => setShowAllProjects(!showAllProjects)}
           >
             {showAllProjects ? "Show Less" : "Show More"}
