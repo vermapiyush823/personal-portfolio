@@ -60,7 +60,10 @@ const ProjectContainer = ({
         <Link
           href={projectgithublink}
           target="_blank"
-          className="text-sm flex justify-center gap-1 items-center text-white p-1 px-2 rounded-full bg-whiteGray/10 hover:underline"
+          className={`text-sm flex justify-center gap-1 items-center  p-1 px-2 rounded-full bg-whiteGray/10 hover:underline
+          
+            ${theme === "light" ? "text-gray bg-gray/10" : "text-white bg-gray"}
+          `}
         >
           Github Link <GitHubLogoIcon />
         </Link>
