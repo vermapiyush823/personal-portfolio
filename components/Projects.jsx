@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { useTheme } from "../app/context/themeContext";
+import ShreeBalaji from "../assets/images/ShreeBalaji.png";
 import UnStuck from "../assets/images/unStuck.png";
+import Clerk from "../assets/logos/clerk.svg";
 import NextJs from "../assets/logos/nextjs.svg";
 import TailwindCss from "../assets/logos/tailwind.svg";
 import ProjectContainer from "./ProjectContainer";
@@ -27,14 +29,15 @@ const Projects = () => {
 
   const projects = [
     {
-      projectname: "UnStuck",
-      projectimage: UnStuck,
+      projectname: "Shree Balaji Jewellers",
+      projectimage: ShreeBalaji,
       projecttechstack: [
         { name: "Next.js", logo: NextJs },
         { name: "Tailwind CSS", logo: TailwindCss },
       ],
-      projectgithublink: "https://github.com/vermapiyush823/unStuck",
-      projectlink: "https://un-stuck.vercel.app/",
+      projectgithublink:
+        "https://github.com/vermapiyush823/SHREE-BALAJI-JWELLERS",
+      projectlink: "https://shree-balaji-jwellers.vercel.app/",
     },
     {
       projectname: "UnStuck",
@@ -42,10 +45,12 @@ const Projects = () => {
       projecttechstack: [
         { name: "Next.js", logo: NextJs },
         { name: "Tailwind CSS", logo: TailwindCss },
+        { name: "Clerk", logo: Clerk },
       ],
       projectgithublink: "https://github.com/vermapiyush823/unStuck",
       projectlink: "https://un-stuck.vercel.app/",
     },
+
     {
       projectname: "UnStuck",
       projectimage: UnStuck,
@@ -78,8 +83,8 @@ const Projects = () => {
   return (
     <div className="w-full max-w-3xl mt-16 rounded-xl transition-all">
       <h2 className="text-2xl font-bold mb-1 ml-1">Projects</h2>
-      <hr className="w-full border-t-2 mb-4 border-gray" />
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <hr className="w-full border-t-2 mb-6 border-gray" />
+      <div className="grid grid-cols-1  sm:grid-cols-2 gap-4">
         {visibleProjects.map((project, index) => (
           <ProjectContainer
             key={index}

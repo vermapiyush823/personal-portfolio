@@ -14,41 +14,45 @@ const ProjectContainer = ({
   const { theme } = useTheme();
   return (
     <div
-      className={`flex flex-col items-center border-2 border-gray rounded-xl p-4 h-full
+      className={`flex flex-col justify-between items-center border-2 border-gray rounded-xl p-4 h-full
       `}
     >
-      <Link
-        href="https"
-        target="_blank"
-        className={`w-[100%] h-[60%] border rounded-xl
+      <div className="flex flex-col items-center w-full gap-2">
+        {" "}
+        <Link
+          href={projectlink}
+          target="_blank"
+          className={`w-[100%] h-[200px] border rounded-xl
       ${
         theme === "dark"
           ? "border-whiteGray shadow-gray shadow-md"
           : "border-gray  shadow-dark-primary shadow-md"
       }
       `}
-      >
-        <Image
-          src={projectimage}
-          alt={projectname}
-          width={100}
-          priority
-          unoptimized={true}
-          height={100}
-          className="rounded-xl
-            
+        >
+          <Image
+            src={projectimage}
+            alt={projectname}
+            width={100}
+            priority
+            unoptimized={true}
+            height={100}
+            className="rounded-xl
+
          w-full h-full object-cover"
-        />
-      </Link>
-      <div className="flex gap-2 mt-3 flex-wrap justify-center">
-        {projecttechstack.map((skill, index) => (
-          <SmallSkillCapsule
-            key={index}
-            skillname={skill.name}
-            logo={skill.logo}
           />
-        ))}
+        </Link>{" "}
+        <div className="flex gap-2 mt-3 flex-wrap justify-center">
+          {projecttechstack.map((skill, index) => (
+            <SmallSkillCapsule
+              key={index}
+              skillname={skill.name}
+              logo={skill.logo}
+            />
+          ))}
+        </div>
       </div>
+
       <div className="flex flex-col w-fit gap-2 text-center justify-center mt-3">
         <Link
           href={projectlink}

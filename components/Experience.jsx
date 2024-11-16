@@ -22,21 +22,17 @@ const Experience = () => {
             company="ServiceNow"
             role="Associate Software Engineer Intern"
             date="Jan 2025 - Present"
-            description={[
-              "Developed and maintained web applications using React, Node.js, and MongoDB.",
-              "Collaborated with cross-functional teams to design and implement new features.",
-              "Participated in Agile development practices, including Sprint planning and daily stand-ups.",
-            ]}
+            description={["Yet to start"]}
             logo={Now}
           />
           <Company
             company="ServiceNow"
-            role="Associate Software Engineer Intern"
+            role="Associate Software Engineer Intern (Summer Internship)"
             date="May 2024 - July 2024"
             description={[
-              "Developed and maintained web applications using React, Node.js, and MongoDB.",
-              "Collaborated with cross-functional teams to design and implement new features.",
-              "Participated in Agile development practices, including Sprint planning and daily stand-ups.",
+              " Built a dashboard to display customers the now-assist features and products.",
+              " Integrated genAI features in ServiceNow microsite builder.",
+              " Gaining experience with AngularJS, REST APIs, JavaScript, and the ServiceNow platform",
             ]}
             logo={Now}
           />

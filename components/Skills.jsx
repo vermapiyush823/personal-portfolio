@@ -70,10 +70,11 @@ const Skills = () => {
         <SkillCapsule
           skillCategory={"Languages"}
           skills={[
-            { name: "JavaScript", logo: JsLogo },
             { name: "Python", logo: PythonLogo },
             { name: "Java", logo: JavaLogo },
             { name: "PHP", logo: Php },
+            { name: "JavaScript", logo: JsLogo },
+
           ]}
         />
 

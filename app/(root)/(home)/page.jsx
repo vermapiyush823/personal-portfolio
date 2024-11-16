@@ -1,5 +1,6 @@
 "use client";
 
+import Education from "@/components/Education";
 import AboutMe from "../../../components/AboutMe";
 import Experience from "../../../components/Experience";
 import Projects from "../../../components/Projects";
@@ -12,6 +13,7 @@ const Home = () => {
       <Experience />
       <Skills />
       <Projects />
+      <Education />
     </div>
   );
 };
