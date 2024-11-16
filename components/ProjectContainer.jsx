@@ -37,7 +37,7 @@ const ProjectContainer = ({
           height={100}
           className="rounded-xl
             
-         w-full h-full"
+         w-full h-full object-cover"
         />
       </Link>
       <div className="flex gap-2 mt-3 flex-wrap justify-center">
