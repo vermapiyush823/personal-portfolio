@@ -9,17 +9,17 @@ const ThemeSwitcher = () => {
       <div
         className={`relative w-fit border-2 rounded-full p-1 ${
           theme === "light"
-            ? "bg-light-primary border-whiteGray"
+            ? "bg-light-primary border-gray/10"
             : theme === "dark"
             ? "bg-dark-primary border-gray"
-            : "bg-light-primary border-whiteGray"
+            : "bg-light-primary border-gray/10"
         }`}
       >
         <div
           className={`absolute h-9 w-9  rounded-full transition-all duration-200 ${
             theme === "light"
-              ? "bg-whiteGray left-0 top-[calc(100%-2.12rem)]"
-              : "bg-gray left-[calc(100%-2.2rem)] top-[calc(100%-2.12rem)]"
+              ? "bg-gray/10 -left-[2px] top-0"
+              : "bg-gray left-[calc(100%-2.2rem)] top-0"
           }`}
         />
 

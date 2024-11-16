@@ -1,12 +1,18 @@
 import { useEffect, useState } from "react";
 import { useTheme } from "../app/context/themeContext";
+import Aura1 from "../assets/images/aura1.jpeg";
+import Aura2 from "../assets/images/aura2.jpeg";
+import Aura3 from "../assets/images/aura3.jpeg";
+import InvestmentTracker from "../assets/images/InvestmentTracker.png";
 import ShreeBalaji from "../assets/images/ShreeBalaji.png";
 import UnStuck from "../assets/images/unStuck.png";
 import Clerk from "../assets/logos/clerk.svg";
+import Css from "../assets/logos/css-3.svg";
 import NextJs from "../assets/logos/nextjs.svg";
+import ReactIcon from "../assets/logos/react.svg";
 import TailwindCss from "../assets/logos/tailwind.svg";
+import Typescript from "../assets/logos/typescript.svg";
 import ProjectContainer from "./ProjectContainer";
-
 const Projects = () => {
   const { theme } = useTheme();
   const [showAllProjects, setShowAllProjects] = useState(false);
@@ -30,18 +36,20 @@ const Projects = () => {
   const projects = [
     {
       projectname: "Shree Balaji Jewellers",
-      projectimage: ShreeBalaji,
+      projectimage: [ShreeBalaji],
       projecttechstack: [
         { name: "Next.js", logo: NextJs },
         { name: "Tailwind CSS", logo: TailwindCss },
+        { name: "TypeScript", logo: Typescript },
       ],
       projectgithublink:
         "https://github.com/vermapiyush823/SHREE-BALAJI-JWELLERS",
       projectlink: "https://shree-balaji-jwellers.vercel.app/",
     },
+
     {
       projectname: "UnStuck",
-      projectimage: UnStuck,
+      projectimage: [UnStuck],
       projecttechstack: [
         { name: "Next.js", logo: NextJs },
         { name: "Tailwind CSS", logo: TailwindCss },
@@ -50,28 +58,26 @@ const Projects = () => {
       projectgithublink: "https://github.com/vermapiyush823/unStuck",
       projectlink: "https://un-stuck.vercel.app/",
     },
-
     {
-      projectname: "UnStuck",
-      projectimage: UnStuck,
+      projectname: "Investment Tracker",
+      projectimage: [InvestmentTracker],
       projecttechstack: [
-        { name: "Next.js", logo: NextJs },
-        { name: "Tailwind CSS", logo: TailwindCss },
-        { name: "Tailwind CSS", logo: TailwindCss },
+        { name: "React", logo: ReactIcon },
+        { name: "CSS", logo: Css },
       ],
-      projectgithublink: "https://github.com/vermapiyush823/unStuck",
-      projectlink: "https://un-stuck.vercel.app/",
+      projectgithublink: "https://github.com/vermapiyush823/Investment-Tracker",
+      projectlink: "https://investment-tracker-sage.vercel.app/",
     },
 
     {
-      projectname: "UnStuck",
-      projectimage: UnStuck,
+      projectname: "Aura",
+      projectimage: [Aura3, Aura2, Aura1],
       projecttechstack: [
         { name: "Next.js", logo: NextJs },
         { name: "Tailwind CSS", logo: TailwindCss },
       ],
-      projectgithublink: "https://github.com/vermapiyush823/unStuck",
-      projectlink: "https://un-stuck.vercel.app/",
+      projectgithublink: "https://github.com/vermapiyush823/Aura",
+      projectlink: "",
     },
 
     // Repeat or add more projects here

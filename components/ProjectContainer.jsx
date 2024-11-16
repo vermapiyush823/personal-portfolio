@@ -22,7 +22,7 @@ const ProjectContainer = ({
         <Link
           href={projectlink}
           target="_blank"
-          className={`w-[100%] h-[200px] border rounded-xl
+          className={`w-[100%] flex h-[200px] border rounded-xl
       ${
         theme === "dark"
           ? "border-whiteGray shadow-gray shadow-md"
@@ -30,17 +30,20 @@ const ProjectContainer = ({
       }
       `}
         >
-          <Image
-            src={projectimage}
-            alt={projectname}
-            width={100}
-            priority
-            unoptimized={true}
-            height={100}
-            className="rounded-xl
+          {projectimage.map((image, index) => (
+            <Image
+              src={image}
+              alt={projectname}
+              key={index}
+              width={100}
+              priority
+              unoptimized={true}
+              height={100}
+              className="rounded-xl
 
          w-full h-full object-cover"
-          />
+            />
+          ))}
         </Link>{" "}
         <div className="flex gap-2 mt-3 flex-wrap justify-center">
           {projecttechstack.map((skill, index) => (
@@ -54,17 +57,19 @@ const ProjectContainer = ({
       </div>
 
       <div className="flex flex-col w-fit gap-2 text-center justify-center mt-3">
-        <Link
-          href={projectlink}
-          className="text-sm text-blue-400 p-1 px-2  bg-blue-400/40 rounded-full hover:bg-blue-400/50"
-          target="_blank"
-        >
-          Click here to view the project
-        </Link>
+        {projectlink && (
+          <Link
+            href={projectlink}
+            className="text-sm text-blue-400 p-1 px-2  bg-blue-400/40 rounded-full hover:bg-blue-400/50"
+            target="_blank"
+          >
+            Click here to view the project
+          </Link>
+        )}
         <Link
           href={projectgithublink}
           target="_blank"
-          className={`text-sm flex justify-center gap-1 items-center  p-1 px-2 rounded-full 
+          className={`text-sm flex justify-center gap-1 items-center min-w-[200px]  p-1 px-2 rounded-full 
           
             ${
               theme === "light"

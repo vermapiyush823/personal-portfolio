@@ -1,4 +1,5 @@
 "use client";
+import Footer from "../../components/Footer";
 import ThemeSwitcher from "../../components/ThemeSwitcher";
 import { useTheme } from "../context/themeContext";
 
@@ -6,7 +7,7 @@ export default function Layout({ children }) {
   const { theme } = useTheme();
   return (
     <main
-      className={`w-full min-h-[100vh] flex flex-col p-4          
+      className={`w-full min-h-[100vh] flex flex-col p-4 pb-0      
        ${
          theme === "dark"
            ? "bg-dark-primary text-light-primary"
@@ -21,6 +22,7 @@ export default function Layout({ children }) {
       >
         {children}
       </section>
+      <Footer />
     </main>
   );
 }
