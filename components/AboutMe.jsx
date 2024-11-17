@@ -1,6 +1,7 @@
 import { GitHubLogoIcon, InstagramLogoIcon } from "@radix-ui/react-icons";
 import { Linkedin, LogoTwitterX } from "geist-icons";
 import Image from "next/image";
+import Link from "next/link";
 import { useTheme } from "../app/context/themeContext";
 import ProfileImage from "../assets/images/profile.jpeg";
 const AboutMe = () => {
@@ -55,9 +56,9 @@ const AboutMe = () => {
 
       {/* Social links */}
       <div className="w-1/4 flex">
-        <a
+        <Link
           href="
-                https://www.linkedin.com/in/piyush-verma-3a8b6b1a1/"
+                https://www.linkedin.com/in/vermapiyush823/"
           target="_blank"
           rel="noopener noreferrer"
           className="p-2 rounded-full transition-colors"
@@ -66,22 +67,10 @@ const AboutMe = () => {
             className="hover:text-blue-400 transition-colors"
             size={20}
           />
-        </a>
-        <a
+        </Link>
+        <Link
           href="
-                https://www.twitter.com/piyushverma_"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="p-2 rounded-full transition-colors "
-        >
-          <LogoTwitterX
-            size={20}
-            className="hover:text-gray transition-color"
-          />
-        </a>
-        <a
-          href="
-                https://www.linkedin.com/in/piyush-verma-3a8b6b1a1/"
+                https://github.com/vermapiyush823"
           target="_blank"
           rel="noopener noreferrer"
           className="p-2  rounded-full transition-colors"
@@ -91,10 +80,10 @@ const AboutMe = () => {
             height={22}
             className="hover:text-textGray transition-color"
           />
-        </a>
-        <a
+        </Link>
+        <Link
           href="
-                    https://www.linkedin.com/in/piyush-verma-3a8b6b1a1/"
+                   https://www.instagram.com/vermapiyush823/"
           target="_blank"
           rel="noopener noreferrer"
           className="p-2 rounded-full transition-colors"
@@ -104,7 +93,19 @@ const AboutMe = () => {
             height={22}
             className="hover:text-pink-500 transition-color"
           />
-        </a>
+        </Link>
+        <Link
+          href="
+      https://x.com/PiyushV23252405"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="p-2 rounded-full transition-colors "
+        >
+          <LogoTwitterX
+            size={20}
+            className="hover:text-gray transition-color"
+          />
+        </Link>
       </div>
     </div>
   );

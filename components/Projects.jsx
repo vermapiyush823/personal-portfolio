@@ -9,6 +9,7 @@ import UnStuck from "../assets/images/unStuck.png";
 import Clerk from "../assets/logos/clerk.svg";
 import Css from "../assets/logos/css-3.svg";
 import NextJs from "../assets/logos/nextjs.svg";
+import ReactNative from "../assets/logos/react-native.svg";
 import ReactIcon from "../assets/logos/react.svg";
 import TailwindCss from "../assets/logos/tailwind.svg";
 import Typescript from "../assets/logos/typescript.svg";
@@ -58,6 +59,17 @@ const Projects = () => {
       projectgithublink: "https://github.com/vermapiyush823/unStuck",
       projectlink: "https://un-stuck.vercel.app/",
     },
+
+    {
+      projectname: "Aura",
+      projectimage: [Aura3, Aura2, Aura1],
+      projecttechstack: [
+        { name: "React Native", logo: ReactNative },
+        { name: "Tailwind CSS", logo: TailwindCss },
+      ],
+      projectgithublink: "https://github.com/vermapiyush823/Aura",
+      projectlink: "",
+    },
     {
       projectname: "Investment Tracker",
       projectimage: [InvestmentTracker],
@@ -67,17 +79,6 @@ const Projects = () => {
       ],
       projectgithublink: "https://github.com/vermapiyush823/Investment-Tracker",
       projectlink: "https://investment-tracker-sage.vercel.app/",
-    },
-
-    {
-      projectname: "Aura",
-      projectimage: [Aura3, Aura2, Aura1],
-      projecttechstack: [
-        { name: "Next.js", logo: NextJs },
-        { name: "Tailwind CSS", logo: TailwindCss },
-      ],
-      projectgithublink: "https://github.com/vermapiyush823/Aura",
-      projectlink: "",
     },
 
     // Repeat or add more projects here
