@@ -9,7 +9,7 @@ const Footer = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
   return (
-    <div className="w-full h-16 px-8 mt-12 border-t border-gray flex items-center justify-between">
+    <div className="w-full h-16 px-2 md:px-4 mt-12 border-t border-gray flex items-center justify-between">
       <Image
         src={Piyush}
         alt="Piyush Verma"
@@ -19,12 +19,12 @@ const Footer = () => {
             ${theme !== "dark" ? "filter invert" : "filter-none"}
         `}
       />
-      <div className="flex gap-x-3 ">
+      <div className="flex gap-x-2 sm:gap-x-3 ">
         <ThemeSwitcher />
         <button
           onClick={MovetoTop}
           className={`
-            p-2 rounded-md font-bold text-dark-primary
+           p-1 sm:p-2 rounded-md font-bold text-dark-primary
         ${
           theme === "dark"
             ? "bg-gray hover:bg-gray/60"
