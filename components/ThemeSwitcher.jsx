@@ -18,7 +18,7 @@ const ThemeSwitcher = () => {
         <div
           className={`absolute h-9 w-9  rounded-full transition-all duration-200 ${
             theme === "light"
-              ? "bg-gray/10 -left-[2px] top-0"
+              ? "bg-whiteGray -left-[2px] top-0"
               : "bg-gray left-[calc(100%-2.2rem)] top-0"
           }`}
         />

@@ -24,7 +24,7 @@ const Footer = () => {
         <button
           onClick={MovetoTop}
           className={`
-           p-1 sm:p-2 rounded-md font-bold text-dark-primary
+          p-1 sm:p-2 rounded-md font-bold text-dark-primary
         ${
           theme === "dark"
             ? "bg-gray hover:bg-gray/60"

@@ -23,12 +23,8 @@ const ProjectContainer = ({
         <Link
           href={projectlink}
           target="_blank"
-          className={`w-[100%] flex h-[200px] border rounded-xl
-      ${
-        theme === "dark"
-          ? "border-whiteGray shadow-gray shadow-md"
-          : "border-gray  shadow-dark-primary shadow-md"
-      }
+          className={`w-[100%] flex bg-dark-primary h-[200px] border rounded-xl
+      ${theme === "dark" ? "border-gray " : " shadow-dark-primary/30"}
       `}
         >
           {projectimage.map((image, index) => (
@@ -41,7 +37,7 @@ const ProjectContainer = ({
               unoptimized={true}
               height={100}
               className="rounded-xl
-
+          
          w-full h-full object-cover"
             />
           ))}

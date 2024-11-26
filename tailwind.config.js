@@ -17,7 +17,7 @@ module.exports = {
           primary: "#0A0A0A",
           text: "#000000",
         },
-        whiteGray: "#D1D5DB",
+        whiteGray: "#EDEDED",
         gray: "#454545",
         textGray: "#878787",
       },
