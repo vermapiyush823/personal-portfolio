@@ -98,7 +98,7 @@ const AboutMe = () => {
         </Link>
         <Link
           href="
-      https://x.com/PiyushV23252405"
+      https://leetcode.com/vermapiyush823/"
           target="_blank"
           rel="noopener noreferrer"
           className="p-2 rounded-full"
