@@ -1,5 +1,7 @@
+import { cibLeetcode } from "@coreui/icons";
+import { CIcon } from "@coreui/icons-react";
 import { GitHubLogoIcon, InstagramLogoIcon } from "@radix-ui/react-icons";
-import { Linkedin, LogoTwitterX } from "geist-icons";
+import { Linkedin } from "geist-icons";
 import Image from "next/image";
 import Link from "next/link";
 import { useTheme } from "../app/context/themeContext";
@@ -55,7 +57,7 @@ const AboutMe = () => {
       </div>
 
       {/* Social links */}
-      <div className="w-1/4 flex">
+      <div className="w-1/4 flex h-fit items-center">
         <Link
           href="
                 https://www.linkedin.com/in/vermapiyush823/"
@@ -99,11 +101,14 @@ const AboutMe = () => {
       https://x.com/PiyushV23252405"
           target="_blank"
           rel="noopener noreferrer"
-          className="p-2 rounded-full transition-colors "
+          className="p-2 rounded-full"
         >
-          <LogoTwitterX
-            size={20}
-            className="hover:text-gray transition-color"
+          <CIcon
+            icon={cibLeetcode}
+            width={22}
+            className={`hover:fill-orange-500 delay-75 transition-colors
+              ${theme === "dark" ? "fill-whiteGray" : "fill-dark-primary"}
+            `}
           />
         </Link>
       </div>
