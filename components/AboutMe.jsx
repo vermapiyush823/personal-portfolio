@@ -107,7 +107,7 @@ const AboutMe = () => {
             icon={cibLeetcode}
             width={20}
             className={`hover:fill-orange-500 delay-75 transition-colors
-              ${theme === "dark" ? "fill-whiteGray" : "fill-dark-primary"}
+              ${theme === "dark" ? "fill-white" : "fill-dark-primary"}
             `}
           />
         </Link>
