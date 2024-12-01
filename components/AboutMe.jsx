@@ -105,7 +105,7 @@ const AboutMe = () => {
         >
           <CIcon
             icon={cibLeetcode}
-            width={22}
+            width={20}
             className={`hover:fill-orange-500 delay-75 transition-colors
               ${theme === "dark" ? "fill-whiteGray" : "fill-dark-primary"}
             `}
