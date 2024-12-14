@@ -9,7 +9,12 @@ import ProfileImage from "../assets/images/profile.jpeg";
 const AboutMe = () => {
   const { theme } = useTheme();
   return (
-    <div className="w-full max-w-3xl p-4 sm:p-6 flex flex-col sm:flex-row  justify-between gap-6 rounded-xl border-2 sm:border-2 border-gray  transition-all">
+    <div
+      className={`w-full max-w-3xl p-4 sm:p-6 flex flex-col sm:flex-row  justify-between gap-6 rounded-xl border-2 sm:border-2 border-gray  transition-all  
+    bg-[#1A1A1A]
+      ${theme === "dark" ? "bg-opacity-50" : "bg-opacity-0"}
+    `}
+    >
       {/* Left content section */}
       <div className="w-full sm:w-3/3 flex flex-col items-center sm:items-start space-y-6">
         {/* Profile header with small image */}
@@ -24,7 +29,12 @@ const AboutMe = () => {
             src={ProfileImage}
             alt="Piyush Verma"
             unoptimized={true}
-            className="w-12 h-12 rounded-full object-cover shadow-md shadow-whiteGray/40 shadow-[0px 20px 0px 4px] "
+            className={`w-12 h-12 rounded-full object-cover 
+            ${
+              theme === "dark"
+                ? "shadow-customDark border-2 border-gray"
+                : "shadow-custom border-2 border-gray/60"
+            }`}
           />
           <div className="flex flex-col items-center sm:items-start">
             <h1 className="text-xl  font-extrabold">Piyush Verma</h1>

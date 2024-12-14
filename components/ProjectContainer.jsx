@@ -15,7 +15,9 @@ const ProjectContainer = ({
   const { theme } = useTheme();
   return (
     <div
-      className={`flex flex-col justify-between items-center border-2 border-gray rounded-xl p-4 h-full
+      className={`flex flex-col justify-between items-center border-2 border-gray bg-[#1A1A1A]
+      ${theme === "dark" ? "bg-opacity-50" : "bg-opacity-5"}
+       rounded-xl p-4 h-full
       `}
     >
       <div className="flex flex-col items-center w-full gap-2">

@@ -22,6 +22,10 @@ module.exports = {
         textGray: "#878787",
       },
     },
+    boxShadow: {
+      custom: "rgba(0,0,0, 0.24) 0px 3px 8px",
+      customDark: "rgba(255,255,255, 0.24) 0px 3px 10px",
+    },
   },
   plugins: [],
 };
