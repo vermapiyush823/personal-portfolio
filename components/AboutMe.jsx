@@ -20,7 +20,7 @@ const AboutMe = () => {
         {/* Profile header with small image */}
 
         <div
-          className="flex flex-col sm:flex-row items-center gap-4 w-full
+          className="flex flex-col sm:flex-row  items-center gap-4 w-fit
         "
         >
           <Image
@@ -29,7 +29,7 @@ const AboutMe = () => {
             src={ProfileImage}
             alt="Piyush Verma"
             unoptimized={true}
-            className={`w-12 h-12 rounded-full object-cover 
+            className={`w-12 sm:w-[4.2rem] h-12 rounded-full
             ${
               theme === "dark"
                 ? "shadow-customDark border-2 border-gray"
@@ -38,8 +38,9 @@ const AboutMe = () => {
           />
           <div className="flex flex-col items-center sm:items-start">
             <h1 className="text-xl  font-extrabold">Piyush Verma</h1>
-            <p className="text-sm font-light flex text-center gap-1">
-              A Full Stack Developer, who loves to code
+            <p className="text-sm font-light flex sm:text-start text-center gap-1">
+              A passionate Full Stack Web Developer, crafting seamless digital
+              experiences from front-end to back-end.
             </p>
           </div>
         </div>
