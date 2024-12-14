@@ -46,13 +46,14 @@ const AboutMe = () => {
         </div>
 
         {/* Email section */}
-        <div className="w-full   sm:flex   items-center text-center sm:text-left">
-          <p
+        <div className="w-full sm:flex   items-center text-center sm:text-left">
+          <div
             className={`text-base w-full inline 
             ${theme === "dark" ? "text-whiteGray" : "text-gray"}
             `}
           >
             Looking to hire me? Email me at{" "}
+            <hr className="sm:hidden border-transparent mb-1" />
             <a
               href="mailto:vermapiyush823@gmail.com"
               className={`mt-2 text-base  sm:mt-0  px-3 py-2 rounded-full transition-colors ${
@@ -63,7 +64,7 @@ const AboutMe = () => {
             >
               vermapiyush823@gmail.com
             </a>
-          </p>
+          </div>
         </div>
       </div>
 
