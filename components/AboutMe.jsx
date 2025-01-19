@@ -19,32 +19,28 @@ const AboutMe = () => {
       <div className="w-full sm:w-3/3 flex flex-col items-center sm:items-start space-y-6">
         {/* Profile header with small image */}
 
-        <div
-          className="flex flex-col sm:flex-row  items-center gap-4 w-fit
-        "
-        >
+        <div className="flex flex-col sm:flex-row items-center gap-4 w-fit">
           <Image
-            width={12}
-            height={12}
+            width={48}
+            height={48}
             src={ProfileImage}
             alt="Piyush Verma"
             unoptimized={true}
-            className={`w-12 sm:w-[4.2rem] h-12 rounded-full
-            ${
-              theme === "dark"
-                ? "shadow-customDark border-2 border-gray"
-                : "shadow-custom border-2 border-gray/60"
-            }`}
+            className={`rounded-full w-16 h-16 sm:w-16 sm:h-16
+    ${
+      theme === "dark"
+        ? "shadow-customDark border-2 border-gray"
+        : "shadow-custom border-none"
+    }`}
           />
           <div className="flex flex-col items-center sm:items-start">
-            <h1 className="text-xl  font-extrabold">Piyush Verma</h1>
+            <h1 className="text-xl font-extrabold">Piyush Verma</h1>
             <p className="text-sm font-light flex sm:text-start text-center gap-1">
               A passionate Full Stack Web Developer, crafting seamless digital
               experiences from front-end to back-end.
             </p>
           </div>
         </div>
-
         {/* Email section */}
         <div className="w-full sm:flex   items-center text-center sm:text-left">
           <div

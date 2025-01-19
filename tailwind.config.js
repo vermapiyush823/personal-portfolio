@@ -14,7 +14,7 @@ module.exports = {
           text: "#FFFFFF",
         },
         dark: {
-          primary: "#0A0A0A",
+          primary: "#000000",
           text: "#000000",
         },
         whiteGray: "#EDEDED",
@@ -23,7 +23,7 @@ module.exports = {
       },
     },
     boxShadow: {
-      custom: "rgba(0,0,0, 0.24) 0px 3px 8px",
+      custom: "rgba(0,0,0, 0.34) 0px 3px 8px",
       customDark: "rgba(255,255,255, 0.24) 0px 3px 10px",
     },
   },
