@@ -13,6 +13,7 @@ import ReactNative from "../assets/logos/react-native.svg";
 import ReactIcon from "../assets/logos/react.svg";
 import TailwindCss from "../assets/logos/tailwind.svg";
 import Typescript from "../assets/logos/typescript.svg";
+import MobileProjectCarousel from "./MobileProjectCarousel";
 import ProjectContainer from "./ProjectContainer";
 const Projects = () => {
   const { theme } = useTheme();
@@ -88,35 +89,42 @@ const Projects = () => {
     isMobile && !showAllProjects ? projects.slice(0, 2) : projects;
 
   return (
-    <div className="w-full max-w-3xl mt-16 rounded-xl transition-all">
+    <div className="w-full mt-16 rounded-xl transition-all">
       <h2 className="text-2xl font-bold mb-1 ml-1">Projects</h2>
       <hr className="w-full border-t-2 mb-6 border-gray" />
-      <div className="grid grid-cols-1  sm:grid-cols-2 gap-4">
-        {visibleProjects.map((project, index) => (
-          <ProjectContainer
-            key={index}
-            projectname={project.projectname}
-            projectimage={project.projectimage}
-            projecttechstack={project.projecttechstack}
-            projectgithublink={project.projectgithublink}
-            projectlink={project.projectlink}
-          />
-        ))}
-      </div>
+      
+      {/* Desktop view: grid layout */}
+      {!isMobile && (
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {projects.map((project, index) => (
+            <ProjectContainer
+              key={index}
+              projectname={project.projectname}
+              projectimage={project.projectimage}
+              projecttechstack={project.projecttechstack}
+              projectgithublink={project.projectgithublink}
+              projectlink={project.projectlink}
+            />
+          ))}
+        </div>
+      )}
+      
+      {/* Mobile view: carousel */}
       {isMobile && (
-        <div className="flex justify-center w-full mt-4">
-          <button
-            className={`text-sm  p-1 px-2 w-full rounded-full 
-            ${
-              theme === "dark"
-                ? "bg-light-primary/50 hover:bg-light-primary/70 text-light-primary"
-                : "bg-gray/40 hover:bg-dark-primary/50 text-dark-primary"
-            }
-            `}
-            onClick={() => setShowAllProjects(!showAllProjects)}
-          >
-            {showAllProjects ? "Show Less" : "Show More"}
-          </button>
+        <div className="mb-8">
+          <MobileProjectCarousel>
+            {projects.map((project, index) => (
+              <div key={index} className="w-full h-full">
+                <ProjectContainer
+                  projectname={project.projectname}
+                  projectimage={project.projectimage}
+                  projecttechstack={project.projecttechstack}
+                  projectgithublink={project.projectgithublink}
+                  projectlink={project.projectlink}
+                />
+              </div>
+            ))}
+          </MobileProjectCarousel>
         </div>
       )}
     </div>

@@ -21,7 +21,76 @@ body {
   background: var(--background);
 }
 
+/* Project carousel animation */
+@keyframes carouselFade {
+  0%, 20% { opacity: 0; transform: scale(1.1); }
+  25%, 45% { opacity: 1; transform: scale(1); }
+  50%, 100% { opacity: 0; transform: scale(1.1); }
+}
 
+/* Apple-style project animations */
+.project-section-height {
+  height: 100vh;
+}
+
+/* Mobile carousel animation */
+@keyframes slideIn {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideOut {
+  from { transform: translateX(0); opacity: 1; }
+  to { transform: translateX(-100%); opacity: 0; }
+}
+
+/* Fade in and out animation for swipe indicator */
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translate(-50%, -50%) scale(0.9); }
+  15% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+  85% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+  100% { opacity: 0; transform: translate(-50%, -50%) scale(0.9); }
+}
+
+.animate-fadeInOut {
+  animation: fadeInOut 3s ease-in-out forwards;
+}
+
+.carousel-item-enter {
+  animation: slideIn 0.3s forwards;
+}
+
+.carousel-item-exit {
+  animation: slideOut 0.3s forwards;
+}
+
+/* Mobile swipe indicator */
+.swipe-indicator {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  background: rgba(0,0,0,0.7);
+  border-radius: 16px;
+  color: white;
+  font-size: 12px;
+  opacity: 0.8;
+  pointer-events: none;
+}
+
+/* Remove scrollbar but allow scrolling */
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;  /* Chrome, Safari, Opera */
+}
 
 @font-face {
   font-family: "Gilroy-Bold";
