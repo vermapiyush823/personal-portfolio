@@ -34,7 +34,7 @@ const Home = () => {
         <AboutMe />
       </AnimatedSection>
       
-      <AnimatedSection className="w-full max-w-3xl mt-10" animation="slide" duration={0.8} delay={0.1} triggerPosition="top 80%">
+      <AnimatedSection className="w-full max-w-3xl mt-12" animation="slide" duration={0.8} delay={0.1} triggerPosition="top 80%">
         <Experience />
       </AnimatedSection>
       
@@ -48,12 +48,11 @@ const Home = () => {
       
       {/* Render Education differently based on device type */}
       {isMobile ? (
-        <div className="w-full max-w-3xl mt-16" style={{ opacity: 1 }}>
           <Education />
-        </div>
+        
       ) : (
         <AnimatedSection 
-          className="w-full max-w-3xl" 
+          className="w-full max-w-3xl mt-10" 
           duration={0.6} 
           animation="fade"
           delay={0.2}

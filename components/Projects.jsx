@@ -95,7 +95,7 @@ const Projects = () => {
       
       {/* Desktop view: grid layout */}
       {!isMobile && (
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           {projects.map((project, index) => (
             <ProjectContainer
               key={index}
@@ -114,7 +114,7 @@ const Projects = () => {
         <div className="mb-8">
           <MobileProjectCarousel>
             {projects.map((project, index) => (
-              <div key={index} className="w-full h-full">
+              <div key={index} className="w-full h-full px-1">
                 <ProjectContainer
                   projectname={project.projectname}
                   projectimage={project.projectimage}

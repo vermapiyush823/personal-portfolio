@@ -25,13 +25,11 @@ const Skills = () => {
 
   return (
     <div className="w-full mt-16 rounded-xl transition-all">
-      <h2 className="text-2xl font-semibold mb-1 ml-1">Skills</h2>
-      <hr className="w-full border-t-2 mb-4 border-gray" />
-      <div
-        className="grid
-     grid-cols-1 sm:grid-cols-1 md:grid-cols-3
-        gap-1 gap-y-3 sm:gap-2 "
-      >
+      <h2 className={`text-2xl font-bold mb-2 ml-1 
+        ${theme === "dark" ? "text-white" : "text-gray-800"}
+      `}>Skills</h2>
+      <hr className="w-full border-t-2 mb-6 border-gray" />
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
         <SkillCapsule
           skillCategory={"Frontend"}
           skills={[
@@ -74,30 +72,16 @@ const Skills = () => {
             { name: "Java", logo: JavaLogo },
             { name: "PHP", logo: Php },
             { name: "JavaScript", logo: JsLogo },
-
           ]}
         />
-
-        <div className="sm:col-start-2">
+        <div className="md:col-span-3 mt-2">
           <SkillCapsule
             skillCategory={"Tools"}
             skills={[
-              {
-                name: "Git",
-                logo: GitLogo,
-              },
-              {
-                name: "Github",
-                logo: GithubLogo,
-              },
-              {
-                name: "Figma",
-                logo: figmaLogo,
-              },
-              {
-                name: "Postman",
-                logo: PostmanLogo,
-              },
+              { name: "Git", logo: GitLogo },
+              { name: "Github", logo: GithubLogo },
+              { name: "Figma", logo: figmaLogo },
+              { name: "Postman", logo: PostmanLogo },
             ]}
           />
         </div>
