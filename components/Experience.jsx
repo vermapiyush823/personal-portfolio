@@ -7,21 +7,19 @@ const Experience = () => {
 
   return (
     <div className="w-full rounded-xl transition-all">
-      <h2 className={`text-2xl font-bold mb-2 ml-1 
+      <h2 className={`text-xl sm:text-2xl font-bold  ml-1 
         ${theme === "dark" ? "text-white" : "text-gray-800"}
         relative inline-block
       `}>
         Experience
-        <span className={`absolute bottom-0 left-0 w-full h-0.5 rounded-full -mb-1
-          ${theme === "dark" ? "bg-gray/60" : "bg-gray/40"}
-        `}></span>
+    
       </h2>
-      <hr className="w-full border-t-2 mb-6 border-gray" />
+      <hr className="w-full border-t-2 mb-4 sm:mb-6 border-gray" />
 
       <div className="relative">
         {/* Timeline vertical line */}
         <div
-          className={`absolute top-1 rounded-full left-[18px] h-[calc(100%-24px)] w-[3px]
+          className={`absolute top-1 rounded-full left-[10px] sm:left-[18px] h-[calc(100%-16px)] w-[2px] sm:w-[3px]
             ${theme === "dark" 
               ? "bg-gradient-to-b from-gray via-gray to-transparent" 
               : "bg-gradient-to-b from-whiteGray via-whiteGray to-transparent"
@@ -30,7 +28,7 @@ const Experience = () => {
         ></div>
         
         {/* Experience entry items */}
-        <div className="space-y-10">
+        <div className="space-y-6 sm:space-y-10">
           <div className="experience-item">
             <Company
               company="ServiceNow"

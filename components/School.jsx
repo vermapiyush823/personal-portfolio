@@ -27,7 +27,7 @@ const School = ({ course, school, date }) => {
 
       {/* Content Card */}
       <div
-        className={`ml-10 sm:ml-12 p-3 sm:p-4 rounded-lg transition-all duration-300
+        className={`ml-10 sm:ml-12 p-3 pt-1 sm:p-4 sm:pt-2 rounded-lg transition-all duration-300
           ${isHovered
             ? theme === "dark"
               ? "bg-dark-primary/30 shadow-md"

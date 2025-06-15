@@ -22,14 +22,11 @@ const Education = () => {
       className="w-full mb-10 rounded-xl transition-all"
       style={{ opacity: 1, transform: "translateY(0)" }}
     >
-      <h2 className={`text-xl sm:text-2xl font-bold mb-2 ml-1 
+      <h2 className={`text-xl sm:text-2xl font-bold  ml-1 
         ${theme === "dark" ? "text-white" : "text-gray-800"}
         relative inline-block
       `} id="education">
         Education
-        <span className={`absolute bottom-0 left-0 w-full h-0.5 rounded-full -mb-1
-          ${theme === "dark" ? "bg-gray/60" : "bg-gray/40"}
-        `}></span>
       </h2>
       <hr className="w-full border-t-2 mb-4 sm:mb-6 border-gray" />
 
