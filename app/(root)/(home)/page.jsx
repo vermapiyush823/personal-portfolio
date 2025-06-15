@@ -6,11 +6,31 @@ import AnimatedSection from "../../../components/AnimatedSection";
 import Experience from "../../../components/Experience";
 import Projects from "../../../components/Projects";
 import Skills from "../../../components/Skills";
+import { useEffect, useState } from "react";
 
 const Home = () => {
+  const [isMobile, setIsMobile] = useState(false);
+  
+  // Check if the device is mobile
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    // Check on initial load
+    checkMobile();
+    
+    // Add event listener for window resize
+    window.addEventListener('resize', checkMobile);
+    
+    return () => {
+      window.removeEventListener('resize', checkMobile);
+    };
+  }, []);
+  
   return (
-    <div className="w-full px-2  sm:px-4 py-8 flex flex-col items-center justify-center">
-      <AnimatedSection className="w-full max-w-3xl " animation="fade" duration={0.8} delay={0.2}>
+    <div className="w-full px-2 sm:px-4 py-8 flex flex-col items-center justify-center">
+      <AnimatedSection className="w-full max-w-3xl" animation="fade" duration={0.8} delay={0.2}>
         <AboutMe />
       </AnimatedSection>
       
@@ -26,18 +46,22 @@ const Home = () => {
         <Projects />
       </AnimatedSection>
       
-      <AnimatedSection 
-        className="w-full max-w-3xl " 
-        duration={0.6} 
-        animation="fade"
-        delay={0.8}
-        staggerChildren={0.1}
-        staggerFrom="start"
-
-        triggerPosition="top 95%"
-      >
-        <Education />
-      </AnimatedSection>
+      {/* Render Education differently based on device type */}
+      {isMobile ? (
+        <div className="w-full max-w-3xl mt-16" style={{ opacity: 1 }}>
+          <Education />
+        </div>
+      ) : (
+        <AnimatedSection 
+          className="w-full max-w-3xl" 
+          duration={0.6} 
+          animation="fade"
+          delay={0.2}
+          triggerPosition="top 95%"
+        >
+          <Education />
+        </AnimatedSection>
+      )}
     </div>
   );
 };

@@ -21,6 +21,21 @@ body {
   background: var(--background);
 }
 
+/* Fix for Education section visibility on mobile */
+@media (max-width: 767px) {
+  #education {
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+  
+  /* Target all elements within the Education section */
+  #education + hr,
+  #education ~ div {
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+}
+
 /* Project carousel animation */
 @keyframes carouselFade {
   0%, 20% { opacity: 0; transform: scale(1.1); }
@@ -85,7 +100,6 @@ body {
 /* Remove scrollbar but allow scrolling */
 .no-scrollbar {
   -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
 }
 
 .no-scrollbar::-webkit-scrollbar {
