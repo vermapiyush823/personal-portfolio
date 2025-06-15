@@ -43,6 +43,40 @@ body {
   50%, 100% { opacity: 0; transform: scale(1.1); }
 }
 
+/* Experience timeline animations */
+@keyframes pulseTimeline {
+  0% { opacity: 0.8; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.1); }
+  100% { opacity: 0.8; transform: scale(1); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.timeline-dot-pulse {
+  animation: pulseTimeline 2s infinite;
+}
+
+/* Experience item animations */
+.experience-item {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.experience-item:nth-child(1) { animation-delay: 0.1s; }
+.experience-item:nth-child(2) { animation-delay: 0.3s; }
+.experience-item:nth-child(3) { animation-delay: 0.5s; }
+
+/* Education item animations */
+.education-item {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.education-item:nth-child(1) { animation-delay: 0.1s; }
+.education-item:nth-child(2) { animation-delay: 0.3s; }
+.education-item:nth-child(3) { animation-delay: 0.5s; }
+
 /* Apple-style project animations */
 .project-section-height {
   height: 100vh;
@@ -68,7 +102,7 @@ body {
 }
 
 .animate-fadeInOut {
-  animation: fadeInOut 3s ease-in-out forwards;
+  animation: fadeInOut 5s ease-in-out forwards;
 }
 
 .carousel-item-enter {

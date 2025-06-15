@@ -114,7 +114,7 @@ const Projects = () => {
         <div className="mb-8">
           <MobileProjectCarousel>
             {projects.map((project, index) => (
-              <div key={index} className="w-full h-full px-1 mt-1">
+              <div key={index} className="w-full h-full px-1 my-1">
                 <ProjectContainer
                   projectname={project.projectname}
                   projectimage={project.projectimage}
