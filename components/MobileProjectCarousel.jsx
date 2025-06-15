@@ -236,7 +236,7 @@ const MobileProjectCarousel = ({ children }) => {
     <div className="relative w-full">
       <div 
         ref={carouselRef}
-        className="relative w-full overflow-hidden min-h-[420px]"
+        className="relative w-full overflow-hidden min-h-[480px]"
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
