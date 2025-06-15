@@ -90,7 +90,7 @@ const Projects = () => {
 
   return (
     <div className="w-full mt-16 rounded-xl transition-all">
-      <h2 className="text-2xl font-bold mb-1 ml-1">Projects</h2>
+      <h2 className="text-2xl font-bold ml-1">Projects</h2>
       <hr className="w-full border-t-2 mb-6 border-gray" />
       
       {/* Desktop view: grid layout */}

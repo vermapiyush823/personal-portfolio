@@ -25,7 +25,7 @@ const Skills = () => {
 
   return (
     <div className="w-full mt-16 rounded-xl transition-all">
-      <h2 className={`text-2xl font-bold mb-2 ml-1 
+      <h2 className={`text-2xl font-bold ml-1 
         ${theme === "dark" ? "text-white" : "text-gray-800"}
       `}>Skills</h2>
       <hr className="w-full border-t-2 mb-6 border-gray" />
