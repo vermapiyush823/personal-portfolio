@@ -28,7 +28,7 @@ const Home = () => {
       
       <AnimatedSection 
         className="w-full max-w-3xl" 
-        animation="fade" 
+        animation="slide" 
         duration={0.6} 
         triggerPosition="top 80%"
       >
