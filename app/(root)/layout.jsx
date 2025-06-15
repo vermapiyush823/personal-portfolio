@@ -42,7 +42,7 @@ export default function Layout({ children }) {
       
       <ThemeSwitcher />
       <section
-        className="flex justify-center items-center w-full min-h-[100vh] relative z-10"
+        className="flex justify-center items-center w-full min-h-[100vh] py-4 relative z-10"
       >
         {children}
       </section>
