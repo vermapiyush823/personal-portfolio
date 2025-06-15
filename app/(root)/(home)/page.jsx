@@ -10,7 +10,7 @@ import Skills from "../../../components/Skills";
 const Home = () => {
   return (
     <div className="w-full px-2  sm:px-4 py-8 flex flex-col items-center justify-center">
-      <AnimatedSection className="w-full max-w-3xl" animation="fade" duration={0.8} delay={0.2}>
+      <AnimatedSection className="w-full max-w-3xl " animation="fade" duration={0.8} delay={0.2}>
         <AboutMe />
       </AnimatedSection>
       
@@ -29,7 +29,12 @@ const Home = () => {
       <AnimatedSection 
         className="w-full max-w-3xl " 
         duration={0.6} 
-        triggerPosition="top 70%"
+        animation="fade"
+        delay={0.8}
+        staggerChildren={0.1}
+        staggerFrom="start"
+
+        triggerPosition="top 95%"
       >
         <Education />
       </AnimatedSection>
